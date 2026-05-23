@@ -6,6 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+} /* Kapanış parantezi buraya eklendi */
 
 .content {
     background-color: #ffffff;
@@ -49,4 +50,34 @@ p {
 ul {
     text-align: left;
     color: #555;
+}
+
+
+.odev-Kapsayici {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    justify-content: flex-start; 
+}
+
+.odev-Kapsayici a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 22px;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px;     background-color: #fdfdfd;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.odev-Kapsayici a:hover {
+    color: #fff;
+    background-color: #007bff; 
+    border-color: #007bff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
 }

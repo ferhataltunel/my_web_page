@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECC006 Homework 10 - E-Commerce Survey Results</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 750px;
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e9ecef;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 600;
+            color: #1a1d20;
+            margin-top: 0;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #1a1d20;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #495057;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #495057;
+            font-size: 15px;
+        }
+
+        
+        .stat-row {
+            margin-bottom: 15px;
+        }
+
+        .stat-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .bar-container {
+            background-color: #e9ecef;
+            border-radius: 4px;
+            height: 12px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            background-color: #1a1d20;
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        .essay-section {
+            background-color: #fafafa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #1a1d20;
+            margin-top: 30px;
+            text-align: justify;
+        }
+
+        .footer {
+            margin-top: 35px;
+            text-align: center;
+            font-size: 14px;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+            padding-top: 20px;
+        }
+
+        .email-link {
+            color: #1a1d20;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid #1a1d20;
+        }
+
+        .email-link:hover {
+            color: #6c757d;
+            border-color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>E-Commerce Survey Analysis</h1>
+        <p>This page illustrates the findings from a local survey conducted with 20 individuals (including friends, family members, and classmates) regarding their online shopping habits and e-commerce utilization behavior.</p>
+
+        <h2>1. General Purchasing Behavior</h2>
+        
+        <div class="stat-row">
+            <div class="stat-label"><span>Have purchased an item online (18 people)</span><span>90%</span></div>
+            <div class="bar-container"><div class="bar-fill" style="width: 90%;"></div></div>
+        </div>
+
+        <div class="stat-row">
+            <div class="stat-label"><span>Have shopped but never purchased online (2 people)</span><span>10%</span></div>
+            <div class="bar-container"><div class="bar-fill" style="width: 10%;"></div></div>
+        </div>
+
+        <h2>2. Frequency of Online Purchases</h2>
+        
+        <div class="stat-row">
+            <div class="stat-label"><span>Once a week (4 people)</span><span>20%</span></div>
+            <div class="bar-container"><div class="bar-fill" style="width: 20%;"></div></div>
+        </div>
+
+        <div class="stat-row">
+            <div class="stat-label"><span>Once a month (11 people)</span><span>55%</span></div>
+            <div class="bar-container"><div class="bar-fill" style="width: 55%;"></div></div>
+        </div>
+
+        <div class="stat-row">
+            <div class="stat-label"><span>Once a year (3 people)</span><span>15%</span></div>
+            <div class="bar-container"><div class="bar-fill" style="width: 15%;"></div></div>
+        </div>
+
+        <h2>3. Demographics & Demanded Platforms</h2>
+        <p><strong>Age Range:</strong> 65% of the participants were within the 18-25 age block, 20% in 26-39, and 15% were 40-50 or over.</p>
+        <p><strong>Gender Representation:</strong> 11 Male (55%) and 9 Female (45%) participants.</p>
+        <p><strong>Education Level:</strong> 50% some college / current undergraduate students, 35% college graduates, and 15% high school level.</p>
+        <p><strong>Favorite Online Shopping Platform:</strong> Amazon was voted as the top preference, followed locally by Trendyol and Hepsiburada due to fast shipping networks.</p>
+
+        <h2>4. Comments and Research Conclusion</h2>
+        <div class="essay-section">
+            <p>
+                The results derived from this 20-person local group sample clearly reflect the overwhelming global transition toward digital markets. A substantial 90% of the sample has actively executed a digital purchase, indicating that online market security concerns are steadily declining among daily consumers. According to comparative statistical frameworks from global metric firms such as eMarketer and Pew Research Center, e-commerce adoption has officially shifted from being a specialized alternative to a primary consumer channel.
+            </p>
+            <p>
+                The high frequency of monthly and weekly shopping patterns observed in our sample group correlates directly with modern behavioral data published across industrial outlets like the E-Commerce Times and ClickZ. These reports highlight that smartphone accessibility and personalized targeted advertisements keep younger demographics (specifically the 18-25 cohort dominant in this survey) constantly engaged with consumer applications. In conclusion, the data demonstrates that e-commerce has fundamentally established itself as an immutable core component of modern economic interaction across all educational and social layers.
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>Prepared by: <a href="mailto:20231131@std.neu.edu.tr" class="email-link">Ferhat Altunel</a> | ECC006 Coursework</p>
+        </div>
+    </div>
+
+</body>
+</html>

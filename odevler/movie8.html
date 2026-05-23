@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECC006 Homework 8 - Favorite Movie</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 600;
+            color: #1a1d20;
+            margin-bottom: 24px;
+        }
+
+        table {
+            width: 100%;
+            max-width: 650px;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #dee2e6;
+        }
+
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            font-size: 15px;
+        }
+
+        th {
+            background-color: #1a1d20;
+            color: #ffffff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            border-bottom: 1px solid #00000010;
+            color: #495057;
+            line-height: 1.5;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        strong {
+            color: #212529;
+            font-weight: 600;
+        }
+
+        .movie-link {
+            display: inline-block;
+            color: #ffffff;
+            background-color: #212529;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .movie-link:hover {
+            background-color: #495057;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .email-link {
+            color: #212529;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid #212529;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Favorite Movie Details</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Movie Feature</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Title of the movie</strong></td>
+                <td>Kurtlar Vadisi: Gladio </td>
+            </tr>
+            <tr>
+                <td><strong>Director / Producer</strong></td>
+                <td>Sadullah Şentürk (Director) / Raci Şaşmaz (Producer)</td>
+            </tr>
+            <tr>
+                <td><strong>Leading Actor</strong></td>
+                <td>Musa Uzunlar (as İskender Büyük)</td>
+            </tr>
+            <tr>
+                <td><strong>Leading Actress</strong></td>
+                <td>Ayfer Dönmez (as Ayşe)</td>
+            </tr>
+            <tr>
+                <td><strong>Rating</strong></td>
+                <td>R (Restricted - Due to political violence)</td>
+            </tr>
+            <tr>
+                <td><strong>Brief Description</strong></td>
+                <td>The movie tells the story of an old deep-state agent, İskender Büyük, who decides to speak out in court and expose the illegal deep-state organization called Gladio.</td>
+            </tr>
+            <tr>
+                <td><strong>Movie Review</strong></td>
+                <td>
+                    <a href="https://www.imdb.com/title/tt1523491/" target="_blank" class="movie-link">View IMDb Review</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p>If you have any questions, contact me: <a href="mailto:20231131@std.neu.edu.tr" class="email-link">Send Email to Ferhat</a></p> 
+    </div>
+
+</body>
+</html>

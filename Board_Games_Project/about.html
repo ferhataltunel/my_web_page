@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Board Games Architecture</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: #0b0f19;
+            color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #1e293b;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+        }
+
+        nav .logo span {
+            color: #3b82f6;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        nav .nav-links a:hover, nav .nav-links a.active {
+            color: #3b82f6;
+        }
+
+        .about-hero {
+            background: linear-gradient(180deg, rgba(59, 130, 246, 0.05) 0%, rgba(11, 15, 25, 0) 100%);
+            padding: 80px 20px 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #1f2937;
+        }
+
+        .about-hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            letter-spacing: -1px;
+        }
+
+        .about-hero p {
+            color: #94a3b8;
+            font-size: 18px;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .layout-container {
+            max-width: 1100px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 50px;
+            padding: 0 20px;
+        }
+
+        .sidebar-nav {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .sidebar-nav h3 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-link {
+            display: block;
+            color: #94a3b8;
+            text-decoration: none;
+            padding: 10px 0;
+            font-size: 15px;
+            font-weight: 500;
+            border-left: 2px solid #1e293b;
+            padding-left: 15px;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar-link:hover {
+            color: #3b82f6;
+            border-left-color: #3b82f6;
+        }
+
+        .article-body {
+            line-height: 1.8;
+            color: #cbd5e1;
+            font-size: 16px;
+        }
+
+        .article-section {
+            margin-bottom: 60px;
+        }
+
+        .article-body h2 {
+            color: #ffffff;
+            font-size: 26px;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .article-body p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .callout-box {
+            background-color: #111827;
+            border-left: 4px solid #3b82f6;
+            border-radius: 0 12px 12px 0;
+            padding: 25px;
+            margin: 35px 0;
+        }
+
+        .callout-box p {
+            margin: 0;
+            font-style: italic;
+            color: #94a3b8;
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .benefit-card {
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .benefit-card h4 {
+            margin: 0 0 10px 0;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .benefit-card p {
+            margin: 0;
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #090d16;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+            margin-top: 120px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">BOARD<span>GAMES</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="survey.html">Survey</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="about-hero">
+        <h1>System Philosophy & Engineering</h1>
+        <p>An abstract exploration of how closed-loop board game models act as cognitive development engines and data science platforms.</p>
+    </div>
+
+    <div class="layout-container">
+        
+        <div class="sidebar-nav">
+            <h3>Documentation</h3>
+            <a href="#cognitive" class="sidebar-link">Cognitive Frameworks</a>
+            <a href="#algorithmic" class="sidebar-link">Algorithmic Systems</a>
+            <a href="#social" class="sidebar-link">Social Architecture</a>
+        </div>
+
+        <div class="article-body">
+            
+            <div id="cognitive" class="article-section">
+                <h2>1. Cognitive Simulation Frameworks</h2>
+                <p>
+                    Beyond basic human entertainment, analog board games function as isolated systemic models designed to stretch neural plasticity. By introducing a rigid rule matrix, these environments compel the human brain to execute predictive tree structures, mapping potential threat branches multiple steps ahead. This practice enhances spatial working memory and significantly boosts executive logical decision-making speeds.
+                </p>
+                <div class="callout-box">
+                    <p>"Closed system design constraints force the human operator to optimize strategy with absolute logical precision, acting as a playground for real-world analytical mapping."</p>
+                </div>
+            </div>
+
+            <div id="algorithmic" class="article-section">
+                <h2>2. Board Games as Algorithmic Blueprints</h2>
+                <p>
+                    Modern computer science and machine learning modules owe their predictive foundations to classical board spaces. The logic loops deployed to solve complex graph routing models, resource bottlenecks, or trade supply distribution issues trace their roots directly back to tabletop mechanics like Catan or Chess. Operating within these environments sharpens a developer's understanding of heuristic weights and probabilistic outcomes under strict system constraints.
+                </p>
+
+                <div class="benefit-grid">
+                    <div class="benefit-card">
+                        <h4>Game Theory</h4>
+                        <p>Simulating strategic interactions between rational decision-makers in closed spaces.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h4>Resource Balance</h4>
+                        <p>Analyzing input-output efficiency metrics and supply chain inflation curves.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h4>Graph Optimization</h4>
+                        <p>Studying structural node links, grid tracking, and territorial networks.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="social" class="article-section">
+                <h2>3. The Architecture of Social Dynamics</h2>
+                <p>
+                    Analog spaces build unique peer-to-peer communication frameworks. Unlike digital isolated UI systems, tabletop environments demand live face-to-face negotiation layers, psychological reading matrices, and collaborative trust trades. This interaction forces players to master high-level diplomatic pacing, crisis mitigation techniques, and rapid collective consensus modeling, establishing board gaming as a powerful tool for social engineering and human behavioral study.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Board Games Web Space. Formulated by Ferhat Altunel.</p>
+    </footer>
+
+</body>
+</html>

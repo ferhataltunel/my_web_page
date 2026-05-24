@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Board Games Hub</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: #0b0f19;
+            color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #1e293b;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+        }
+
+        nav .logo span {
+            color: #3b82f6;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        nav .nav-links a:hover, nav .nav-links a.active {
+            color: #3b82f6;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .contact-header h1 {
+            font-size: 38px;
+            font-weight: 800;
+            margin: 0 0 10px 0;
+            letter-spacing: -1px;
+        }
+
+        .contact-header p {
+            color: #94a3b8;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .message-card {
+            background-color: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .message-card h2 {
+            font-size: 20px;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+        }
+
+        .form-field {
+            margin-bottom: 20px;
+        }
+
+        .form-field label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #94a3b8;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .message-card input[type="text"],
+        .message-card input[type="email"],
+        .message-card textarea {
+            width: 100%;
+            background-color: #0b0f19;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            padding: 12px 14px;
+            color: #ffffff;
+            font-size: 14px;
+            font-family: inherit;
+            box-sizing: border-box;
+            transition: all 0.3s;
+        }
+
+        .message-card input:focus,
+        .message-card textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+
+        .send-btn {
+            background-color: #3b82f6;
+            color: #ffffff;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .send-btn:hover {
+            background-color: #2563eb;
+            transform: translateY(-1px);
+        }
+
+        .info-card {
+            background-color: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .info-block h3 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #3b82f6;
+            margin: 0 0 8px 0;
+        }
+
+        .info-block p {
+            font-size: 16px;
+            color: #cbd5e1;
+            margin: 0 0 25px 0;
+            font-weight: 500;
+        }
+
+        .map-wrapper {
+            background-color: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 300px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(1) invert(0.9) contrast(1.2); /* Haritayı Premium Karanlık Mod Yapar */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #090d16;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">BOARD<span>GAMES</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="survey.html">Survey</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+    </nav>
+
+    <div class="contact-container">
+        
+        <div class="contact-header">
+            <h1>Establish Connection Node</h1>
+            <p>Reach out to the lead systems architect for collaborations, ledger audits, or grid updates.</p>
+        </div>
+
+        <div class="contact-grid">
+            
+            <div class="message-card">
+                <h2>Send Direct Transmission</h2>
+                <form action="#" method="POST" onsubmit="alert('Transmission dispatched successfully!'); return false;">
+                    <div class="form-field">
+                        <label for="c-name">Operator Identity</label>
+                        <input type="text" id="c-name" required placeholder="Your full name">
+                    </div>
+                    <div class="form-field">
+                        <label for="c-email">Return Email Node</label>
+                        <input type="email" id="c-email" required placeholder="yourname@domain.com">
+                    </div>
+                    <div class="form-field">
+                        <label for="c-message">Encrypted Payload (Message)</label>
+                        <textarea id="c-message" rows="4" required placeholder="Write your coordination details here..."></textarea>
+                    </div>
+                    <button type="submit" class="send-btn">Dispatch Message</button>
+                </form>
+            </div>
+
+            <div class="info-card">
+                <div>
+                    <div class="info-block">
+                        <h3>Lead Architect</h3>
+                        <p>Ferhat Altunel</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>HQ Operations Node</h3>
+                        <p>Nicosia Network Base, Cyprus</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Secure Comms</h3>
+                        <p>faltunel1@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-block" style="margin-bottom: 0;">
+                    <h3>Response Frequency Matrix</h3>
+                    <p style="margin-bottom: 0; font-size: 14px; color: #64748b;">Typically responds within 24 operational hours.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52181.189569766724!2d33.32431707010419!3d35.17351659756193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de1767ca494d55%3A0xaba22174ec0e4f7a!2sLefko%C5%9Fa!5e0!3m2!1str!2s!4v1716578000000!5m2!1str!2s" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Board Games Web Space. Formulated by Ferhat Altunel.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey - Board Games Hub</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: #0b0f19;
+            color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #1e293b;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+        }
+
+        nav .logo span {
+            color: #3b82f6;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        nav .nav-links a:hover, nav .nav-links a.active {
+            color: #3b82f6;
+        }
+
+        .form-container {
+            max-width: 680px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-header h1 {
+            font-size: 36px;
+            font-weight: 800;
+            margin: 0 0 10px 0;
+            letter-spacing: -1px;
+        }
+
+        .form-header p {
+            color: #94a3b8;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        form {
+            background-color: #111827; /* Koyu Gri/Siyah Kart Arka Planı */
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .form-group {
+            margin-bottom: 28px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form select,
+        form textarea {
+            width: 100%;
+            background-color: #0b0f19;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: #ffffff;
+            font-size: 15px;
+            font-family: inherit;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        form input:focus,
+        form select:focus,
+        form textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 5px;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            color: #cbd5e1;
+            cursor: pointer;
+            font-weight: 400 !important;
+        }
+
+        form input[type="radio"],
+        form input[type="checkbox"] {
+            accent-color: #3b82f6; /* Modern tarayıcılarda mavi renk yapar */
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background-color: #3b82f6;
+            color: #ffffff;
+            border: none;
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .reset-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #64748b;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .reset-link:hover {
+            color: #94a3b8;
+        }
+
+        footer {
+            background-color: #090d16;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">BOARD<span>GAMES</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="survey.html" class="active">Survey</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        
+        <div class="form-header">
+            <h1>Player Preference Matrix</h1>
+            <p>Contribute to our ongoing analytical data research on tabletop architectural preferences.</p>
+        </div>
+
+        <form action="#" method="POST" onsubmit="alert('Analytical data simulated successfully!'); return false;">
+            
+            <div class="form-group">
+                <label for="username">Full Name / Operator ID</label>
+                <input type="text" id="username" name="username" placeholder="e.g. Ferhat Altunel" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Secure Email Node</label>
+                <input type="email" id="email" name="email" placeholder="e.g. ferhat@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="primary-game">Primary Framework of Choice</label>
+                <select id="primary-game" name="primary-game">
+                    <option value="chess">Chess (Abstract Strategy)</option>
+                    <option value="monopoly">Monopoly (Economic Simulation)</option>
+                    <option value="catan">Catan (Resource Management)</option>
+                    <option value="risk">Risk (Geopolitical Control)</option>
+                    <option value="scrabble">Scrabble (Combinatorial Linguistics)</option>
+                    <option value="carcassonne">Carcassonne (Modular Placement)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Preferred Complexity Vector (Weight)</label>
+                <div class="radio-group">
+                    <label class="option-label">
+                        <input type="radio" name="complexity" value="low" checked>
+                        <span>Low Weight (Casual / Fast Pace)</span>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="complexity" value="medium">
+                        <span>Medium Weight (Balanced Algorithmic)</span>
+                    </label>
+                    <label class="option-label">
+                        <input type="radio" name="complexity" value="high">
+                        <span>High Weight (Deep Strategic Tree)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Desired System Mechanics (Select All That Apply)</label>
+                <div class="checkbox-group">
+                    <label class="option-label">
+                        <input type="checkbox" name="mechanics" value="dice" checked>
+                        <span>Stochastic Luck (Dice / Cards)</span>
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="mechanics" value="trading">
+                        <span>Peer-to-Peer Trading Networks</span>
+                    </label>
+                    <label class="option-label">
+                        <input type="checkbox" name="mechanics" value="spatial">
+                        <span>Spatial Grid Movement & Control</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Strategic Analysis Notes / Feedback</label>
+                <textarea id="feedback" name="feedback" rows="4" placeholder="Describe your optimal game design parameters..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Transmit Survey Data</button>
+            
+            <a href="survey.html" class="reset-link">Clear Matrix Inputs</a>
+
+        </form>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Board Games Web Space. Formulated by Ferhat Altunel.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board Games Hub - Premium Edition</title>
+    <style>
+        
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: #0b0f19; 
+            color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+       
+        nav {
+            background-color: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #1e293b;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        nav .logo span {
+            color: #3b82f6; 
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        nav .nav-links a:hover, nav .nav-links a.active {
+            color: #3b82f6;
+        }
+
+       
+        .hero {
+            max-width: 800px;
+            margin: 80px auto 50px auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1140px;
+            margin: 0 auto 80px auto;
+            padding: 0 20px;
+        }
+
+        
+        .game-card {
+            background: #111827; 
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        
+        .card-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+       
+        .card-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-content h3 {
+            font-size: 22px;
+            margin: 0 0 12px 0;
+            color: #ffffff;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .card-content p {
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin: 0 0 20px 0;
+        }
+
+      
+        .card-action {
+            margin-top: auto;
+            font-size: 13px;
+            font-weight: 700;
+            color: #3b82f6;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        
+        .game-card:hover {
+            transform: translateY(-8px);
+            border-color: #3b82f6;
+            box-shadow: 0 12px 30px rgba(59, 130, 246, 0.2);
+        }
+
+        .game-card:hover .card-image img {
+            transform: scale(1.08);
+        }
+
+        .game-card:hover .card-content h3 {
+            color: #3b82f6;
+        }
+
+        
+        footer {
+            background-color: #090d16;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">BOARD<span>GAMES</span></div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="survey.html">Survey</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>The Architecture of <span>Strategic Minds</span></h1>
+        <p>Dive deep into the mathematical algorithms, strategic economics, and layout designs of history's most prominent board games.</p>
+    </div>
+
+    <div class="game-grid">
+        
+        <a href="monopoly.html" class="game-card">
+            <div class="card-image">
+                <img src="monopoly.jpg" alt="Monopoly">
+            </div>
+            <div class="card-content">
+                <h3>Monopoly</h3>
+                <p>An executive engineering analysis on capital distribution, property valuation, and financial dominance matrices.</p>
+                <div class="card-action">Explore Mechanics &rarr;</div>
+            </div>
+        </a>
+
+        <a href="catan.html" class="game-card">
+            <div class="card-image">
+                <img src="catan.jpg" alt="Catan Board Game">
+            </div>
+            <div class="card-content">
+                <h3>Catan</h3>
+                <p>A systematic layout study focusing on raw material grid allocation, trade algorithms, and structural placement.</p>
+                <div class="card-action">Explore Mechanics &rarr;</div>
+            </div>
+        </a>
+
+        <a href="chess.html" class="game-card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=600&q=80" alt="Chess">
+            </div>
+            <div class="card-content">
+                <h3>Chess</h3>
+                <p>The timeless mathematical framework. Exploring combinatorics, neural sequence tree mapping, and decision theory.</p>
+                <div class="card-action">Explore Mechanics &rarr;</div>
+            </div>
+        </a>
+
+        <a href="risk.html" class="game-card">
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1606167668584-78701c57f13d?auto=format&fit=crop&w=600&q=80" alt="Risk">
+            </div>
+            <div class="card-content">
+                <h3>Risk</h3>
+                <p>Strategic geopolitical simulation mapping, territory defense calculations, and dynamic probability systems.</p>
+                <div class="card-action">Explore Mechanics &rarr;</div>
+            </div>
+        </a>
+
+        <a href="scrabble.html" class="game-card">
+            <div class="card-image">
+                <img src="scrabble.jpg" alt="Scrabble Board Game">
+            </div>
+            <div class="card-content">
+                <h3>Scrabble</h3>
+                <p>Combinatorial string alignment and spatial token optimization. Merging semantic lexical matrices with UI alignment.</p>
+                <div class="card-action">Explore Mechanics &rarr;</div>
+            </div>
+        </a>
+
+        <a href="carcassonne.html" class="game-card">
+            <div class="card-image">
+                <img src="carcassonne.jpg" alt="Carcassonne">
+            </div>
+            <div class="card-content">
+                <h3>Carcassonne</h3>
+                <p>Analyzing modular tile-placement algorithms, area-enclosure tactics, and dynamic territory scoring mechanics.</p>
+                <div class="card-action">Explore Mechanics &rarr;</div>
+            </div>
+        </a>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Board Games Web Space. Formulated by Ferhat Altunel.</p>
+    </footer>
+
+</body>
+</html>
